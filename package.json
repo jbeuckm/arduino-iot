@@ -1,0 +1,17 @@
+{
+  "name": "arduino-iot",
+  "version": "1.0.0",
+  "description": "Datalogger and HTML server supporting Arduino-baswed IoT appliance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Beuckman",
+  "license": "Don't read software licenses / don't write software licenses.",
+  "dependencies": {
+    "JSON2": "^0.1.0",
+    "express": "^4.13.3",
+    "mongodb": "^2.0.42",
+    "request": "^2.61.0"
+  }
+}
