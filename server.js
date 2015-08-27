@@ -1,4 +1,5 @@
-var express = require('express');
+var express = require('express')
+  , csv = require('express-csv');
 
 var Db = require('mongodb').Db;
 //var Connection = require('mongodb').Connection;
@@ -25,7 +26,14 @@ app.all('*', function(req, res, next) {
 
 app.get('/logs.json', function(req, res) {
 
-    res.json(records);
+    db.collection('logs', function(err, record_collection){
+
+	record_collection.find().toArray(function (err, docs) {
+
+	    res.json(docs);
+
+	});
+    });
 
 });
 
