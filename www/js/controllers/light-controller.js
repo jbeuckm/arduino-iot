@@ -3,17 +3,25 @@ angular.module('arduino-iot')
 
         var arduino = "http://192.168.0.177";
 
-        $http.get(arduino).then(function(response){
+        $scope.light_on = false;
 
-            $scope.temperature = response.data.temperature;
-            $scope.humidity = response.data.humidity;
+        function refresh() {
 
-            $scope.light = (response.data.pinD4 == 1);
+            $http.get(arduino).then(function(response){
 
-        }, console.error);
+                $scope.temperature = response.data.temperature;
+                $scope.humidity = response.data.humidity;
 
+                $scope.light_on = (response.data.pinD4 == 1);
 
-        $scope.$watch('light', function(newValue, oldValue) {
+                $scope.light_sensor = Math.floor(100 * response.data.analog0 / 1023) + "%"
+
+            }, console.error);
+
+        }
+        $scope.refresh = refresh;
+
+        $scope.$watch('light_on', function(newValue, oldValue) {
 
             $http({
                 method: 'POST',
@@ -23,8 +31,13 @@ angular.module('arduino-iot')
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }}).then(function(response) {
                     console.log("post responded "+response);
+
+//                    refresh();
+
                 }, console.error);
 
         });
+
+        refresh();
 
     });

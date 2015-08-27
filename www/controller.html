@@ -19,10 +19,16 @@
   </div>
 
   <div>
-  <label>Humidity</label> <span>{{ humidity }}</span>
+    <label>Humidity</label> <span>{{ humidity }}</span>
   </div>
 
-  <div><label>Light</label><input type="checkbox" ng-model="light"></div>
+  <div>
+    <label>Light</label> <span>{{ light_sensor }}</span>
+  </div>
+
+  <div><label>Light</label><input type="checkbox" ng-model="light_on"></div>
+
+  <div><button ng-click="refresh()">refresh</button></div>
 
 </div>
 
