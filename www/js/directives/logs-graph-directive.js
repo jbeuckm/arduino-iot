@@ -52,9 +52,9 @@ angular.module('arduino-iot')
 //                        d.date = parseDate(d.created_at);
                         return {
                             date: new Date(d.created_at),
-                            temperature: parseInt(d.temperature),
-                            humidity: parseInt(d.humidity),
-                            light: parseInt(d.analog0) / 1023
+                            'temp (C)': parseInt(d.temperature),
+                            'humidity (%)': parseInt(d.humidity),
+                            light: parseInt(d.analog0) / 102.3
                         };
                     });
 
@@ -85,13 +85,7 @@ angular.module('arduino-iot')
 
                     svg.append("g")
                         .attr("class", "y axis")
-                        .call(yAxis)
-                        .append("text")
-                        .attr("transform", "rotate(-90)")
-                        .attr("y", 6)
-                        .attr("dy", ".71em")
-                        .style("text-anchor", "end")
-                        .text("Temperature (C)");
+                        .call(yAxis);
 
                     var city = svg.selectAll(".city")
                         .data(cities)

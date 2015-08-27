@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0fbfb0c-62e9-4727-9edd-578554690f9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/templates/logs-graph-directive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/controller.html" afterPath="$PROJECT_DIR$/www/controller.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/directives/logs-graph-directive.js" afterPath="$PROJECT_DIR$/www/js/directives/logs-graph-directive.js" />
     </list>
     <ignored path="arduino-iot.iws" />
@@ -46,7 +43,7 @@
       <file leaf-file-name="logs-graph-directive.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/directives/logs-graph-directive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="61" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.51860744">
+            <state line="55" column="42" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.7106843">
               <folding />
             </state>
           </provider>
@@ -425,7 +422,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/directives/logs-graph-directive.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="61" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.51860744">
+        <state line="55" column="42" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.7106843">
           <folding />
         </state>
       </provider>
